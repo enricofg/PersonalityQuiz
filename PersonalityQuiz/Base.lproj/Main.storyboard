@@ -29,6 +29,9 @@
                                         <rect key="frame" x="0.0" y="73.666666666666686" width="359" height="50"/>
                                         <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
                                         <state key="normal" title="Begin Personality Quiz"/>
+                                        <connections>
+                                            <segue destination="c8Y-Fd-s7m" kind="show" identifier="StartQuiz" id="CAF-KZ-3F1"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <constraints>
@@ -65,17 +68,17 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="c7C-7v-Nxz" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="0EP-8A-8Ku"/>
-                            <constraint firstItem="lvX-SM-DHg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="whK-0L-bKw" secondAttribute="trailing" constant="8" symbolic="YES" id="0fZ-y0-3d5"/>
                             <constraint firstItem="c7C-7v-Nxz" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="8" id="2ot-0m-Dql"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="nWJ-Ke-21W" secondAttribute="trailing" constant="20" id="5zD-Va-wKE"/>
+                            <constraint firstItem="nWJ-Ke-21W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jix-lA-sow" secondAttribute="trailing" id="6v1-jt-SHR"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="lvX-SM-DHg" secondAttribute="trailing" constant="20" id="7Rg-LY-n5w"/>
                             <constraint firstItem="nWJ-Ke-21W" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="BPq-ip-709"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="c7C-7v-Nxz" secondAttribute="trailing" constant="8" id="FiY-W3-IUV"/>
                             <constraint firstItem="c7C-7v-Nxz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="Gjw-fq-9fi"/>
                             <constraint firstItem="Jix-lA-sow" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Odi-oF-HqZ"/>
+                            <constraint firstItem="lvX-SM-DHg" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="whK-0L-bKw" secondAttribute="trailing" id="Ucn-Fo-VMb"/>
                             <constraint firstItem="lvX-SM-DHg" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="UxP-Sp-s19"/>
                             <constraint firstItem="whK-0L-bKw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="VpL-ch-Fuh"/>
-                            <constraint firstItem="nWJ-Ke-21W" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="Jix-lA-sow" secondAttribute="trailing" constant="8" symbolic="YES" id="k6C-mj-8cs"/>
                             <constraint firstItem="whK-0L-bKw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="oRm-oF-Gsl"/>
                             <constraint firstItem="Jix-lA-sow" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="vUK-yv-KYY"/>
                         </constraints>
@@ -84,6 +87,68 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="55" y="100"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="FEu-yF-aSm">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhY-u0-bu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="OOh-iQ-JL4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="NFD-ld-N9E">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="dNX-ib-gyy"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="TFi-we-mUu"/>
+                    <connections>
+                        <segue destination="5Id-bf-Zc0" kind="show" identifier="Results" id="r9U-FK-dKZ"/>
+                    </connections>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="1530" y="100"/>
+        </scene>
+        <!--Results-->
+        <scene sceneID="tOb-wd-w4R">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U95-KM-Apj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <viewController id="5Id-bf-Zc0" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="vhG-Uq-1Hp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Csc-A4-IpZ"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Results" id="Cy1-3z-uvb">
+                        <barButtonItem key="rightBarButtonItem" style="plain" id="2iC-Db-pun">
+                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QzP-j8-oSE">
+                                <rect key="frame" x="-23" y="-15" width="83" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                            </button>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+            </objects>
+            <point key="canvasLocation" x="2247" y="100"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Xji-Jf-bzq">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="c8Y-Fd-s7m" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="xnF-zj-KUB"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="b8y-G3-EKz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OOh-iQ-JL4" kind="relationship" relationship="rootViewController" id="oBK-Pz-1sZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="q8Q-Go-7gF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="783" y="100"/>
         </scene>
     </scenes>
     <resources>
