@@ -91,7 +91,6 @@
         <!--View Controller-->
         <scene sceneID="FEu-yF-aSm">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="AhY-u0-bu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="OOh-iQ-JL4" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="NFD-ld-N9E">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
@@ -104,30 +103,49 @@
                         <segue destination="5Id-bf-Zc0" kind="show" identifier="Results" id="r9U-FK-dKZ"/>
                     </connections>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="AhY-u0-bu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1530" y="100"/>
         </scene>
         <!--Results-->
         <scene sceneID="tOb-wd-w4R">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="U95-KM-Apj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="5Id-bf-Zc0" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="vhG-Uq-1Hp">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="758"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="uqd-mw-fPy">
+                                <rect key="frame" x="20" y="305.66666666666669" width="335" height="146.66666666666669"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fiW-xv-9tN">
+                                        <rect key="frame" x="0.0" y="0.0" width="335" height="109.33333333333333"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="50"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3xc-2C-Ev2">
+                                        <rect key="frame" x="0.0" y="109.33333333333331" width="335" height="37.333333333333343"/>
+                                        <fontDescription key="fontDescription" name="NotoSansMyanmar-Regular" family="Noto Sans Myanmar" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Csc-A4-IpZ"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="uqd-mw-fPy" firstAttribute="centerY" secondItem="vhG-Uq-1Hp" secondAttribute="centerY" id="TcA-Hn-Mr9"/>
+                            <constraint firstItem="uqd-mw-fPy" firstAttribute="leading" secondItem="Csc-A4-IpZ" secondAttribute="leading" constant="20" id="ccS-HT-fFr"/>
+                            <constraint firstItem="Csc-A4-IpZ" firstAttribute="trailing" secondItem="uqd-mw-fPy" secondAttribute="trailing" constant="20" id="zao-WJ-FIR"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="Cy1-3z-uvb">
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="2iC-Db-pun">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" id="QzP-j8-oSE">
-                                <rect key="frame" x="-23" y="-15" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="2iC-Db-pun"/>
                     </navigationItem>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="U95-KM-Apj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2247" y="100"/>
         </scene>
