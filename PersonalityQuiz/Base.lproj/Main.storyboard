@@ -102,18 +102,30 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KPS-sJ-bJB">
                                         <rect key="frame" x="0.0" y="0.0" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="OOh-iQ-JL4" eventType="touchUpInside" id="ZA1-3P-Bue"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0tU-9w-cLT">
                                         <rect key="frame" x="0.0" y="50" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="OOh-iQ-JL4" eventType="touchUpInside" id="wTd-53-QGg"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HUc-2D-S1t">
                                         <rect key="frame" x="0.0" y="100" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="OOh-iQ-JL4" eventType="touchUpInside" id="Si7-Tl-gqb"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="enm-5k-51S">
                                         <rect key="frame" x="0.0" y="150" width="335" height="30"/>
                                         <state key="normal" title="Button"/>
+                                        <connections>
+                                            <action selector="singleAnswerButtonPressed:" destination="OOh-iQ-JL4" eventType="touchUpInside" id="aN4-4b-eo9"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -179,6 +191,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TJg-Lu-5vD">
                                         <rect key="frame" x="0.0" y="204" width="335" height="30"/>
                                         <state key="normal" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="multipleAnswerButtonPressed" destination="OOh-iQ-JL4" eventType="touchUpInside" id="FSR-ia-IFB"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -208,6 +223,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8Ky-T6-ChH">
                                         <rect key="frame" x="0.0" y="90.333333333333314" width="335" height="30"/>
                                         <state key="normal" title="Submit Answer"/>
+                                        <connections>
+                                            <action selector="rangedAnswerButtonPressed" destination="OOh-iQ-JL4" eventType="touchUpInside" id="tcy-yX-Fzo"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -243,7 +261,27 @@
                     </view>
                     <navigationItem key="navigationItem" id="TFi-we-mUu"/>
                     <connections>
-                        <segue destination="5Id-bf-Zc0" kind="show" identifier="Results" id="r9U-FK-dKZ"/>
+                        <outlet property="multiLabel1" destination="qby-0g-G8G" id="vsh-aI-ewR"/>
+                        <outlet property="multiLabel2" destination="cvG-zF-ig0" id="Ej5-YZ-5F1"/>
+                        <outlet property="multiLabel3" destination="rGo-hg-Cm2" id="nI4-Sv-hPc"/>
+                        <outlet property="multiLabel4" destination="mND-sJ-tEh" id="1jn-vL-ca0"/>
+                        <outlet property="multiSwitch1" destination="L0v-Pl-QKR" id="xWM-92-gx6"/>
+                        <outlet property="multiSwitch2" destination="S1i-Jj-XMb" id="8ll-W9-MO8"/>
+                        <outlet property="multiSwitch3" destination="1E1-3M-A4U" id="N30-8r-2cC"/>
+                        <outlet property="multiSwitch4" destination="evX-QM-cht" id="gMs-Kg-d9j"/>
+                        <outlet property="multipleStackView" destination="ras-ni-9Vb" id="RMe-tX-Yhk"/>
+                        <outlet property="questionLabel" destination="NIn-co-voy" id="U6t-yI-N0D"/>
+                        <outlet property="questionProgressView" destination="4nV-s8-iJC" id="H31-FM-hgz"/>
+                        <outlet property="rangedLabel1" destination="KEZ-zz-2L3" id="oWU-Mb-G6Q"/>
+                        <outlet property="rangedLabel2" destination="R4v-Gd-mDJ" id="CbQ-dP-qFY"/>
+                        <outlet property="rangedSlider" destination="L1Y-Xf-TEy" id="XHb-3B-Ocu"/>
+                        <outlet property="rangedStackView" destination="Xuf-VJ-h9o" id="Uil-WM-jG6"/>
+                        <outlet property="singleButton1" destination="KPS-sJ-bJB" id="ZLV-se-5iA"/>
+                        <outlet property="singleButton2" destination="0tU-9w-cLT" id="99l-32-bB5"/>
+                        <outlet property="singleButton3" destination="HUc-2D-S1t" id="zfo-LV-BYf"/>
+                        <outlet property="singleButton4" destination="enm-5k-51S" id="iGm-Ai-hpu"/>
+                        <outlet property="singleStackView" destination="zeT-AX-kUj" id="9CT-Th-an0"/>
+                        <segue destination="5Id-bf-Zc0" kind="show" identifier="Results" destinationCreationSelector="showResults:" id="r9U-FK-dKZ"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AhY-u0-bu1" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -285,10 +323,19 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Results" id="Cy1-3z-uvb">
-                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="2iC-Db-pun"/>
+                        <barButtonItem key="rightBarButtonItem" style="plain" systemItem="done" id="2iC-Db-pun">
+                            <connections>
+                                <segue destination="a4l-uv-myf" kind="unwind" unwindAction="unwindToQuizIntroductionWithSegue:" id="ddg-9c-Kez"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="resultAnswerLabel" destination="fiW-xv-9tN" id="OgD-YO-fmW"/>
+                        <outlet property="resultDefinitionLabel" destination="3xc-2C-Ev2" id="fPF-RC-hDe"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="U95-KM-Apj" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="a4l-uv-myf" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="2247" y="100"/>
         </scene>
